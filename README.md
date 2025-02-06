@@ -9,3 +9,4 @@ Entități:
 •	documente_cadastrale
 •	coordonate_imobile, tip_folosinta, tip_constructii
 
+![Diagrama examen](Diagrama examen.png)
