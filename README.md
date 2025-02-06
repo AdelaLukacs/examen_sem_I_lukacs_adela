@@ -5,6 +5,7 @@ O instituție administrativă locală dorește ca pentru unitatea administrativ 
 Entități:
 •	judet, uat, localitati
 •	sector_cadastral, imobile, parcele, constructii
-•	proprietari, tip_proprietate
+•	proprietari, proprietari_imobile
 •	documente_cadastrale
-•	tip_uat, tip_folosinta, tip_constructii
+•	coordonate_imobile, tip_folosinta, tip_constructii
+
