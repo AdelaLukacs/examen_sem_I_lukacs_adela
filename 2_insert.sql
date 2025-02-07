@@ -1,3 +1,5 @@
+--Insert judet
+
 INSERT INTO judet (nume_judet, cod_siruta_judet) VALUES ('Arad', '29');
 
 INSERT INTO judet (nume_judet, cod_siruta_judet) VALUES ('Bihor', '56');
@@ -18,6 +20,8 @@ INSERT INTO judet (nume_judet, cod_siruta_judet) VALUES ('Sibiu', '323');
 
 INSERT INTO judet (nume_judet, cod_siruta_judet) VALUES ('Timis', '350');
 
+
+--Insert uat
 
 INSERT INTO uat (nume_uat, cod_siruta_uat, tip_uat, id_judet) VALUES ('Arad', '9262', 'municipiu', '1');
 
@@ -40,6 +44,8 @@ INSERT INTO uat (nume_uat, cod_siruta_uat, tip_uat, id_judet) VALUES ('Avrig', '
 INSERT INTO uat (nume_uat, cod_siruta_uat, tip_uat, id_judet) VALUES ('Lugoj', '155350', 'municipiu', '10');
 
 
+--Insert sector_cadastral
+
 INSERT INTO sector_cadastral (numar_sector, suprafata, id_uat) VALUES ('15', '256492', '1');
 
 INSERT INTO sector_cadastral (numar_sector, suprafata, id_uat) VALUES ('21', '249951', '2');
@@ -60,6 +66,8 @@ INSERT INTO sector_cadastral (numar_sector, suprafata, id_uat) VALUES ('31', '16
 
 INSERT INTO sector_cadastral (numar_sector, suprafata, id_uat) VALUES ('8', '189513', '10');
 
+
+--Insert imobile
 
 INSERT INTO imobile (numar_imobil, suprafata, id_sector_cadastral) VALUES ('1234', '256', '1');
 
@@ -82,6 +90,8 @@ INSERT INTO imobile (numar_imobil, suprafata, id_sector_cadastral) VALUES ('1425
 INSERT INTO imobile (numar_imobil, suprafata, id_sector_cadastral) VALUES ('1352', '795', '10');
 
 
+--Insert coordonate_imobile
+
 INSERT INTO coordonate_imobile (latitudine, longitudine, id_imobile) VALUES ('46.1866', '21.3123', '1');
 
 INSERT INTO coordonate_imobile (latitudine, longitudine, id_imobile) VALUES ('46.9911', '21.9877', '2');
@@ -102,6 +112,8 @@ INSERT INTO coordonate_imobile (latitudine, longitudine, id_imobile) VALUES ('45
 
 INSERT INTO coordonate_imobile (latitudine, longitudine, id_imobile) VALUES ('45.6886', '21.9035', '10');
 
+
+--Insert documente_cadastrale
 
 INSERT INTO documente_cadastrale (tip_document, numar_document, id_imobile) VALUES ('Carte funciara', '256398', '1');
 
@@ -124,15 +136,7 @@ INSERT INTO documente_cadastrale (tip_document, numar_document, id_imobile) VALU
 INSERT INTO documente_cadastrale (tip_document, numar_document, id_imobile) VALUES ('Carte funciara', '325896', '10');
 
 
-INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Arabil', 'A');
-
-INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Vie', 'V');
-
-INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Livezi', 'L');
-
-INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Pasune', 'P');
-
-INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Curti-constructii', 'Cc');
+--Insert tip_folosinta
 
 INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Arabil', 'A');
 
@@ -144,6 +148,18 @@ INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Pasun
 
 INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Curti-constructii', 'Cc');
 
+INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Arabil', 'A');
+
+INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Vie', 'V');
+
+INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Livezi', 'L');
+
+INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Pasune', 'P');
+
+INSERT INTO tip_folosinta (denumire_tip_folosinta, cod_cadastral) VALUES ('Curti-constructii', 'Cc');
+
+
+--Insert proprietari
 
 INSERT INTO proprietari (nume_proprietar, cnp_proprietar) VALUES ('Popescu Maria', '2090316309876');
 
@@ -166,6 +182,8 @@ INSERT INTO proprietari (nume_proprietar, cnp_proprietar) VALUES ('Neagu Alexand
 INSERT INTO proprietari (nume_proprietar, cnp_proprietar) VALUES ('Dobre Mihaela', '2060412134567');
 
 
+--Insert parcele
+
 INSERT INTO parcele (numar_parcela, suprafata, id_tip_folosinta, id_imobile, id_proprietari) VALUES ('101', '450', '1', '1', '1');
 
 INSERT INTO parcele (numar_parcela, suprafata, id_tip_folosinta, id_imobile, id_proprietari) VALUES ('98', '620', '2', '2', '2');
@@ -186,6 +204,8 @@ INSERT INTO parcele (numar_parcela, suprafata, id_tip_folosinta, id_imobile, id_
 
 INSERT INTO parcele (numar_parcela, suprafata, id_tip_folosinta, id_imobile, id_proprietari) VALUES ('138', '560', '10', '10', '10');
 
+
+--Insert proprietari_imobile
 
 INSERT INTO proprietari_imobile (parte_detinere, id_proprietari, id_imobile) VALUES ('100', '1', '1');
 
@@ -208,22 +228,24 @@ INSERT INTO proprietari_imobile (parte_detinere, id_proprietari, id_imobile) VAL
 INSERT INTO proprietari_imobile (parte_detinere, id_proprietari, id_imobile) VALUES ('50', '10', '10');
 
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '1');
+--Insert constructii
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '2');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('2', '101', '360', '1');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '3');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('1', '98', '180', '2');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '4');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('1', '56', '200', '3');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '5');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('3', '152', '520', '4');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '6');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('2', '83', '450', '5');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '7');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('1', '45', '140', '6');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '8');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('3', '75', '600', '7');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '9');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('2', '63', '330', '8');
 
-INSERT INTO constructii (numar_constructii, suprafata, id_parcele) VALUES ('', '', '10');
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('1', '121', '130', '9');
+
+INSERT INTO constructii (numar_constructii, numar_parcela, suprafata, id_parcele) VALUES ('3', '138', '410', '10');
