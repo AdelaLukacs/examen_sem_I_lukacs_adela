@@ -9,4 +9,4 @@ Entități:
 •	documente_cadastrale
 •	coordonate_imobile, tip_folosinta, tip_constructii
 
-![Diagrama examen](https://github.com/AdelaLukacs/examen_sem_I_lukacs_adela/blob/main/Diagram%C4%83%20examen.drawio)
+![Diagrama examen](https://github.com/AdelaLukacs/examen_sem_I_lukacs_adela/blob/main/Diagram%C4%83%20examen.png)
