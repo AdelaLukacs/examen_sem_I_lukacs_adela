@@ -86,6 +86,7 @@ CREATE TABLE IF NOT EXISTS parcele
 CREATE TABLE IF NOT EXISTS constructii
 (
 	id_constructii SERIAL PRIMARY KEY,
+	numar_constructii INTEGER NOT NULL,
 	numar_parcela INTEGER NOT NULL,
 	suprafata DECIMAL NOT NULL,
 	adresa VARCHAR (200) NULL,
